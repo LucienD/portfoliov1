@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AkuPaku</title>
+  <meta name="description" content="Site portfolio Lucien Dartois">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-app="Portfolio">
+    
+        <!------------------SON PARTIE TRAVAUX-------------------->
+    <audio preload="auto" id="audioTravaux" src="musics/sontravaux.mp3"></audio>
+
+    <!----------------------SON PARTIE MONDE---------------------->
+    <audio preload="auto" id="audioMonde" src="musics/sonspace.mp3">         </audio>
+        <!------------------SON PARTIE PRESENTATION--------------->
+    <audio preload="auto" id="audioPresentation" src="musics/sonpresentation.mp3"></audio>
+    
+        <div id="wrap">
+            <div id="elementTravaux2" onclick="pauseElmt()" ng-include="'pages/element_travaux2.svg'"></div>
+            <div id="elementTravaux" onclick="pauseElmt()" ng-include="'pages/element_travaux.svg'"></div>
+            <div id="blob" ng-include="'pages/blob.svg'"></div>
+            <div id="elementPresentation" ng-include="'pages/element_presentation.svg'"></div>
+        </div>
+    
+        <div id="contener_menu">
+           <div onclick="goSpace()" ng-include="'menu/monde.svg'"></div>
+           <div onclick="goMer()" ng-include="'menu/presentation.svg'"></div>
+           <div onclick="goTerre()" ng-include="'menu/travaux.svg'"></div>
+           <div onclick="goCloud()" ng-include="'menu/contact.svg'"></div>  
+        </div>    
+
+        <div id="stopAudio" onclick="colorToggle('stopAudio')"></div>
+        <div id="logo" onclick="goRestart()" alt="logo">
+            <div id="mask" ng-include="'css/img/logo.svg'"></div>
+        </div>
+    
+     
+     <!--<script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>-->
+     <script type="application/javascript" src="js/angular.min.js"></script>
+
+     <script type="text/javascript" src="js/app.js"></script>
+    <link rel="stylesheet" href="css/stylesvg.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+   
+</body>
+
+
+</html>
+

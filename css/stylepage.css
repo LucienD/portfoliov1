@@ -1,0 +1,211 @@
+/*---------------------------------------------------------------------------------------------------------------------------------ELEMENT PARTIE PRESENTATION-------------------------------------------------------------------------------------------------------------------*/
+
+#elmtPre{
+    overflow: visible;
+}
+
+#elementPresentation{
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(4400px) scale(1.6);
+    -webkit-transform: translateY(4400px) scale(1.6);
+}
+
+#eclair{
+    animation: flash 2s ease-in-out infinite;
+    -webkit-animation: flash 2s ease-in-out infinite;
+}
+@keyframes flash{
+    50%{ opacity: 0.1; }
+}
+@-webkit-keyframes flash{
+    50%{ opacity: 0.1; }
+}
+
+#fondVision{
+    transition: all 0.4s ease-out;
+	-webkit-transition: all 0.4s ease-out;
+    transition-delay: .4s;
+    -webkit-transition-delay: .4s;
+}
+
+#visionFond.active {
+	-webkit-transform: scale(600);
+	-webkit-transition: all 0.6s ease-out;
+	-webkit-transition-delay: .4s;
+}
+
+.bulleEffect{
+    -webkit-transform: scale(1);
+	opacity: 1;
+}
+
+.bulleEffect.active {
+	-webkit-transform: scale(1.5);
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-out;
+}
+
+/*BLOB*/
+#blobP{
+    overflow: visible;
+}
+#blob{
+    transform-origin: 105px 64px;
+    -webkit-transform-origin: 105px 64px;
+    transform: translateY(4870px) translateX(10%) scale(0.8);
+    -webkit-transform: translateY(4870px) translateX(10%) scale(0.8);
+    animation: mouvBlob 15s cubic-bezier(0.61,0.01,0.24,0.89) infinite;
+    -webkit-animation: mouvBlob 15s cubic-bezier(0.61,0.01,0.24,0.89) infinite;
+}
+@keyframes mouvBlob{
+    0%{ transform: translateX(10%) translateY(4870px) scale(0.8); }
+    50%{ transform: translateX(70%) translateY(4950px) scale(1); }
+    55%{ transform: translateX(70%) translateY(4950px) scale(1) rotateY(180deg); }
+    95%{ transform: translateX(10%) translateY(4870px) scale(0.8) rotateY(180deg); }
+    100%{ transform: translateX(10%) translateY(4870px) scale(0.8) rotateY(0deg); }
+}
+@-webkit-keyframes mouvBlob{
+    0%{ -webkit-transform: translateX(10%) translateY(4870px) scale(0.8); }
+    50%{ -webkit-transform: translateX(70%) translateY(4950px) scale(1); }
+    55%{ -webkit-transform: translateX(70%) translateY(4950px) scale(1) rotateY(180deg); }
+    95%{ -webkit-transform: translateX(10%) translateY(4870px) scale(0.8) rotateY(180deg); }
+    100%{ -webkit-transform: translateX(10%) translateY(4870px) scale(0.8) rotateY(0deg); }
+}
+
+#wingG{
+    transform-origin: 85px 85px;
+    -webkit-transform-origin: 85px 85px;
+    animation: flyG 2s ease-in-out infinite;
+    -webkit-animation: flyG 2s ease-in-out infinite;
+}
+@keyframes flyG{
+    50%{ transform: rotate(-25deg); }
+}
+@-webkit-keyframes flyG{
+    50%{ -webkit-transform: rotate(-25deg); }
+}
+#wingD{
+    transform-origin: 94px 85px;
+    -webkit-transform-origin: 94px 85px;
+    animation: flyD 2s ease-in-out infinite;
+    -webkit-animation: flyD 2s ease-in-out infinite;
+}
+@keyframes flyD{
+    50%{ transform: rotate(25deg); }
+}
+@-webkit-keyframes flyD{
+    50%{ -webkit-transform: rotate(25deg); }
+}
+
+
+/*------------------------------------------------------------------------------ ELEMENT PARTIE TRAVAUX-----------------------------------------------------------------------------------------------------*/
+
+#elementTravaux{
+    position: absolute;
+    top: 150px;
+    transform: translateY(6200px);
+    -webkit-transform: translateY(6200px);
+    transform-origin: 84.5px 90px;
+    -webkit-transform-origin: 84.5px 90px;
+    
+    animation: allerRetour 60s linear infinite;
+    -webkit-animation: allerRetour 60s linear infinite;
+    
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+}
+#elementTravaux2{
+    position: absolute;
+    transform: translateY(6050px);
+    -webkit-transform: translateY(6050px);
+    transform-origin: 84.5px 90px;
+    -webkit-transform-origin: 84.5px 90px;
+    
+    animation: job2 80s linear infinite;
+    -webkit-animation: job2 80s linear infinite;
+    
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+}
+
+#elementTravaux:hover, #elementTravaux2:hover{
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+@keyframes job2{
+     0%{ transform: translateY(6050px) rotateY(180deg); left: 90%;}
+    50%{ transform: translateY(6050px) rotateY(180deg); left: 10%; }
+    51%{ transform: translateY(6050px) rotateY(0deg); left: 10%; }
+   99%{ transform: translateY(6050px) rotateY(0deg); left: 90%;}
+  100%{ transform: translateY(6050px) rotateY(180deg); left: 90%;}
+}
+@-webkit-keyframes job2{
+     0%{ -webkit-transform: translateY(6050px) rotateY(180deg); left: 90%; }
+    50%{ -webkit-transform: translateY(6050px) rotateY(180deg); left: 10%; }
+    51%{ -webkit-transform: translateY(6050px) rotateY(0deg); left: 10%; }
+   99%{ -webkit-transform: translateY(6050px) rotateY(0deg); left: 90%; }
+  100%{ -webkit-transform: translateY(6050px) rotateY(180deg); left: 90%; }   
+}
+@keyframes allerRetour{
+     0%{ transform: translateY(6050px) rotateY(0deg); left: 10%;}
+    50%{ transform: translateY(6050px) rotateY(0deg); left: 90%;}
+    51%{ transform: translateY(6050px) rotateY(180deg); left: 90%;}
+   99%{ transform: translateY(6050px)  rotateY(180deg); left: 10%;}
+  100%{ transform: translateY(6050px)  rotateY(0deg); left: 10%;}
+}
+@-webkit-keyframes allerRetour{
+     0%{ -webkit-transform: translateY(6050px) rotateY(0deg); left: 10%; }
+    50%{ -webkit-transform: translateY(6050px) rotateY(0deg); left: 90%; }
+    51%{ -webkit-transform: translateY(6050px) rotateY(180deg); left: 90%; }
+   99%{ -webkit-transform: translateY(6050px) rotateY(180deg); left: 10%; }
+  100%{ -webkit-transform: translateY(6050px) rotateY(0deg); left: 10%;}   
+}
+
+
+
+#jambe1{
+	transform-origin: 318px 168px;
+	-webkit-transform-origin: 318px 168px;
+	animation: marche 1s cubic-bezier(0.49, 0, 1, 0.85) infinite;
+	-webkit-animation: marche 1s cubic-bezier(0.49, 0, 1, 0.85) infinite;
+}
+
+#jambe2{
+	transform-origin: 318px 168px;
+	-webkit-transform-origin: 318px 168px;
+	animation: marcheinv 1s cubic-bezier(0.49, 0, 1, 0.85) infinite;
+	-webkit-animation: marcheinv 1s cubic-bezier(0.49, 0, 1, 0.85) infinite;
+}
+
+.jambe1-2{
+	transform-origin: 74px 169px;
+	-webkit-transform-origin: 74px 169px;
+	animation: marche 1s cubic-bezier(0.49, 0, 1, 0.85) infinite;
+	-webkit-animation: marche 1s cubic-bezier(0.49, 0, 1, 0.85) infinite;
+}
+
+.jambe2-2{
+	transform-origin: 74px 169px;
+	-webkit-transform-origin: 74px 169px;
+	animation: marcheinv 1s cubic-bezier(0.49, 0, 1, 0.85) infinite;
+	-webkit-animation: marcheinv 1s cubic-bezier(0.49, 0, 1, 0.85) infinite;
+}
+
+@keyframes marche{
+	50%{ transform: rotate(-45deg); }
+}
+
+@-webkit-keyframes marche{
+	50%{ -webkit-transform: rotate(-45deg); }
+}
+
+@keyframes marcheinv{
+	50%{ transform: rotate(45deg); }
+}
+
+@-webkit-keyframes marcheinv{
+	50%{ -webkit-transform: rotate(45deg); }
+}

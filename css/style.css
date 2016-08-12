@@ -1,0 +1,121 @@
+@import url('stylepage.css');
+@import url('stylefont.css');
+
+body{
+    background-color: #DDA945;
+    margin: 0;
+    padding: 0;
+    overflow: hidden !important;
+}
+
+#wrap{
+    position: absolute;
+    width: 100%;
+    height: 6647px;
+    background: url(img/fondnew.svg);
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0);
+    transition: all 8s cubic-bezier(.43,.01,.28,.99);
+    -webkit-transition: all 8s cubic-bezier(.43,.01,.28,.99);
+}
+
+h1{
+    color: white;
+}
+
+#stopAudio{
+    position: fixed;
+    margin: 1em;
+    width: 2em;
+    height: 2em;
+    top: 0;
+    left: 0;
+    color: #FF4306;
+    cursor: pointer;
+}
+#stopAudio.toggled{
+    color: #CCC;
+}
+#stopAudio::before{
+    font-family: 'icomoon';
+    content: '\e604';
+    font-size: 2em;
+}
+
+/*-------------------------------------------------------------------------CONTENEUR DES ANIMATIONS/NAVIGATION---------------------------------------------------------------------------*/
+
+#contener_menu{
+    text-align: center;
+    transform: scale3d(1,1,1);
+    -webkit-transform: scale3d(1,1,1);
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+#contener_menu div{
+    display: inline-block;
+    cursor: pointer;
+}
+
+#presentation, #monde, #travaux, #contact{
+    transform: scale3d(0.9,0.9,1);
+    -webkit-transform: scale3d(0.9,0.9,1);
+}
+
+@media (max-width: 1500px){
+    #contener_menu{
+        transform: scale3d(0.8,0.8,1);
+        -webkit-transform: scale3d(0.8,0.8,1);
+    }
+}
+@media (max-width: 1400px){
+    #contener_menu{
+        transform: scale3d(0.7,0.7,1);
+        -webkit-transform: scale3d(0.7,0.7,1);
+    }
+}
+        
+
+/*-------------------------------------------------------------------------LOGO-----------------------------------------------------------------------------*/
+
+#logo{
+    position: fixed;
+    text-align: center;
+    top: -20em;
+    right: 1%;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 2s cubic-bezier(.43,.01,.28,.99);
+    -webkit-transition: all 2s cubic-bezier(.43,.01,.28,.99);
+}
+#akuMask{
+    transform-origin: 67px 67px;
+    -webkit-transform-origin: 67px 67px;
+    transform: scale(0.85);
+    -webkit-transform: scale(0.85);
+}
+
+#logo:hover #logoCog{
+    animation: logo 5s linear infinite;
+    -webkit-animation: logo 5s linear infinite;
+    transform-origin: 67px 67px;
+    -webkit-transform-origin: 50% 50%;
+}
+@keyframes logo{
+    100%{ transform: rotate(360deg); }
+}
+@-webkit-keyframes logo{
+    100%{ -webkit-transform: rotate(360deg); }
+}
+  
+#mask{
+    position: absolute;
+    left: -15%;
+    top: -15%;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
